@@ -7,12 +7,14 @@
 		<title>login</title>
 		<style>
 		#center {
-  			  	margin: auto;
-  				width: 15%;
-  				border: 3px solid purple;
-  				padding: 10px;
-  				text-align: center;
-			}
+  			  margin: auto;
+  			width: 15%;
+  			padding: 10px;
+  			text-align: center;
+		}
+		#hidden{
+		display:none
+		}
 		</style>
 	</head>
 
@@ -35,12 +37,12 @@
 			</table>
 			<p style ="color: red" >${result}</p>
 			<input  type="Submit" name="submit" value="login">
-		</form action="${pageContext.servletContext.contextPath}/createAccount" method="get">
-			<input  type="Submit" name="submit" value="Create Account">
-		<form>
+		
 		
 		</form>
-		
-		
+		<form action="${pageContext.servletContext.contextPath}/CreateAccount" method="get">
+			<input  type="Submit" name="submit" value="Create Account">
+		</form>
+		<h1  >${usernameNew}&${passwordNew}</h1>
 	</body>
 </html>

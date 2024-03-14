@@ -14,7 +14,7 @@ public class CreateAccountController {
 	}
 	
 	public boolean setPassword(String password, String passwordConfirm) {
-		if(password.equals(passwordConfirm)) {
+		if(password != "" && password.equals(passwordConfirm)) {
 			user.setPassword(password);
 			return true;
 		}

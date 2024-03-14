@@ -15,7 +15,9 @@ import edu.ycp.cs320.lab02.model.Account;
 
 public class LogInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Account user;
+	private Account user = new Account();
+	private String usernameNew;
+	private String passwordNew;
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -23,15 +25,25 @@ public class LogInServlet extends HttpServlet {
 		
 		System.out.println("Index Servlet: doGet");
 		
+		
+		usernameNew = req.getParameter("usernameNew");
+		passwordNew = req.getParameter("passwordNew");
+		System.out.println(usernameNew+" "+passwordNew);
+		System.out.println(user.getUsername()+"i"+user.getPassword());
+		
 		req.getRequestDispatcher("/_view/login.jsp").forward(req, resp);
 	}
 	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		user = new Account();
-		user.setUsername("a");
-		user.setPassword("a");
+		usernameNew = "a";
+		passwordNew = "b";
+		System.out.println(usernameNew+" "+passwordNew);
+		System.out.println(user.getUsername()+"i"+user.getPassword());
+		user.setUsername(usernameNew);
+		user.setPassword(passwordNew);
+		System.out.println(user.getUsername()+user.getPassword());
 		LogInController controller = new LogInController(user);
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");

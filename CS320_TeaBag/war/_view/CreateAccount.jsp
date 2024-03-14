@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<title>Add Numbers</title>
+		<title>Create Account</title>
 		<style>
 		#center {
   			  	margin: auto;

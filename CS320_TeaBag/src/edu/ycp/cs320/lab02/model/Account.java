@@ -4,7 +4,8 @@ public class Account {
 	private String username, password;
 	
 	public Account() {
-		
+		username="";
+		password="";
 	}
 	
 	public void setUsername(String name) {
