@@ -29,7 +29,7 @@ public class GamePageServlet extends HttpServlet {
 			throws ServletException, IOException {
 		model = new GameEngine(req.getParameter("terminal"));
 		GameEngineController controller = new GameEngineController(model);
-		System.out.println(controller.Append(req.getParameter("input")));
+		controller.process(req.getParameter("input"));
 		req.setAttribute("model", model);
 		
 		req.getRequestDispatcher("/_view/gamePage.jsp").forward(req, resp);
