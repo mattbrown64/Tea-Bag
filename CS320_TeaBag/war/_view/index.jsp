@@ -7,19 +7,15 @@
 
 	<body>
 		This is the index view jsp
-		<form action="${pageContext.servletContext.contextPath}/addNumbers" method="get">
-			<input type="Submit" name="submit" value="Add Numbers!">
+		<form action="${pageContext.servletContext.contextPath}/login" method="get">
+			<input type="Submit" name="submit" value="Log In">
 		</form>
 		
-		<form action="${pageContext.servletContext.contextPath}/multiplyNumbers" method="get">
-			<input type="Submit" name="submit" value="Multiply Numbers!">
-		</form>
-		
-		<form action="${pageContext.servletContext.contextPath}/guessingGame" method="get">
-			<input type="Submit" name="submit" value="Guessing Game!">
+		<form action="${pageContext.servletContext.contextPath}/createAccount" method="get">
+			<input type="Submit" name="submit" value="Create Account">
 		</form>
 		<form action="${pageContext.servletContext.contextPath}/gamePage" method="get">
-			<input type="Submit" name="submit" value="game!">
+			<input type="Submit" name="submit" value="Game">
 		</form>
 	</body>
 </html>
