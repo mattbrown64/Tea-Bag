@@ -27,7 +27,7 @@
 		<div align="center">
 			<h1>The tea-bag adventure game</h1>
 			
-			<form action="${pageContext.servletContext.contextPath}/index" method="post">
+			<form action="${pageContext.servletContext.contextPath}/gamePage" method="post">
 			<textarea id="container" style="overflow-y: scroll;" rows="30"  name="terminal">${model.output}</textarea>
 				<input id= "input" type="text" name="input" size="12"  />
 			</form>

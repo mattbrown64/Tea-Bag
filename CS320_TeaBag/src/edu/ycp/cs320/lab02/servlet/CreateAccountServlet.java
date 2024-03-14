@@ -12,16 +12,16 @@ import edu.ycp.cs320.lab02.model.GameEngine;
 
 
 
-public class GamePageServlet extends HttpServlet {
+public class CreateAccountServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private GameEngine model;
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		System.out.println("GamePage Servlet: doGet");
+		System.out.println("Index Servlet: doGet");
 		
-		req.getRequestDispatcher("/_view/gamePage.jsp").forward(req, resp);
+		req.getRequestDispatcher("/_view/gamepage.jsp").forward(req, resp);
 	}
 	
 	@Override
@@ -34,13 +34,5 @@ public class GamePageServlet extends HttpServlet {
 		
 		req.getRequestDispatcher("/_view/gamePage.jsp").forward(req, resp);
 	}
-	
-	
-	
-	
-
-	
-	
-		
 }
-
+	
