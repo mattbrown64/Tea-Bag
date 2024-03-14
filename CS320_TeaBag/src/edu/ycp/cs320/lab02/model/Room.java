@@ -19,6 +19,9 @@ public class Room {
 	public Room findPath(String s) {
 		return connections.find(s);
 	}
+	public void setConnections(RoomConnections connections) {
+		this.connections=connections;
+	}
 	
 	public String description() {
 		if(hasBeen) {

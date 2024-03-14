@@ -9,7 +9,7 @@ public class GameEngineController {
 	}
 	
 	public String Append(String input) {
-		String appended = model.getOutput()+"\n"+input;
+		String appended = model.getOutput()+"\n"+input+"\n";
 		model.setOutput(appended);
 		return appended;
 	}
