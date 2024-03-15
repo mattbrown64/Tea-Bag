@@ -12,12 +12,7 @@ public abstract class Actor implements Commands {
 		room = r;
 	}
 	public String move(String s) {
-		Room r = room.findPath(s);
-		if (r!=null) {
-			room = r;
-			return "moved "+ s;
-		}
-		return "no passage "+ s;
+		return "wrong class";
 	}
 	public Room getRoom() {
 		return room;

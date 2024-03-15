@@ -15,11 +15,13 @@ import edu.ycp.cs320.lab02.model.GameEngine;
 public class GamePageServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private GameEngine model;
+	private GameEngineController controller = new GameEngineController(model);
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
+		model = new GameEngine(req.getParameter("terminal"));
 		System.out.println("GamePage Servlet: doGet");
+		controller = new GameEngineController(model);
 		
 		req.getRequestDispatcher("/_view/gamePage.jsp").forward(req, resp);
 	}
@@ -27,8 +29,7 @@ public class GamePageServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		model = new GameEngine(req.getParameter("terminal"));
-		GameEngineController controller = new GameEngineController(model);
+		
 		controller.process(req.getParameter("input"));
 		req.setAttribute("model", model);
 		

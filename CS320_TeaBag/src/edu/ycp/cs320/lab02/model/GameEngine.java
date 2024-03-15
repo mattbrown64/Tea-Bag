@@ -63,6 +63,8 @@ public class GameEngine {
 		connections4.add(roomMap.get(0));
 		roomMap.get(4).setConnections(new RoomConnections(connections4,path4));
 		
+		System.out.println(roomMap.get(0)==roomMap.get(4));
+		
 		
 		//<----------------------->
 		//this.output += actors.get(0).getRoom().description();

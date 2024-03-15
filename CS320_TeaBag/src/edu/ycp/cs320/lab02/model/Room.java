@@ -22,6 +22,9 @@ public class Room {
 	public void setConnections(RoomConnections connections) {
 		this.connections=connections;
 	}
+	public void printConnections() {
+		connections.printConnections();
+	}
 	
 	public String description() {
 		if(hasBeen) {

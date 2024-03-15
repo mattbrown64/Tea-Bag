@@ -21,4 +21,10 @@ public class RoomConnections {
 		}
 		return null;
 	}
+	
+	public void printConnections() {
+		for(Room room :connections) {
+			System.out.println(room.description());
+		}
+	}
 }
